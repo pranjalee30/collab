@@ -31,19 +31,22 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <div className="controls">
-        {/* Display Options for Grouping and Sorting */}
+    <>
+    
         <DisplayOptions
           selectedGrouping={grouping}
           selectedOrdering={sorting}
           onGroupingChange={(e) => handleGroupingChange(e.target.value)} // Pass new grouping
           onOrderingChange={(e) => handleSortingChange(e.target.value)} // Pass new sorting
         />
+    <div className="app">
+      <div className="controls">
+        {/* Display Options for Grouping and Sorting */}
       </div>
       {/* Kanban Board to display tickets based on grouping and sorting */}
       <KanbanBoard tickets={tickets} grouping={grouping} sorting={sorting} />
     </div>
+    </>
   );
 }
 
