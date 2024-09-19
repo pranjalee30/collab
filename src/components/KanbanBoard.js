@@ -7,7 +7,7 @@ import { priorityMap } from '../utils/priorityMap';
 function KanbanBoard({ tickets, grouping, users, sorting }) {
   // Group tickets by status, priority, or user
   let groupedTickets = groupTickets(tickets, grouping, users);
-
+  
   // Sort tickets based on the selected ordering (priority or title)
   const sortedGroupedTickets = sortTickets(groupedTickets, sorting);
 
@@ -17,13 +17,13 @@ function KanbanBoard({ tickets, grouping, users, sorting }) {
         <div key={group} className="kanban-column">
           <div className="kanban-column-header">
             <div className="kanban-card-count">
-              {/* Show priority name or group */}
+              {/* Show user name if grouping by user, otherwise show priority name or group */}
               <div className="kanban-column-title">
-                {grouping === 'priority' ? priorityMap[group] : group}
+                {grouping === 'user' ? group : (grouping === 'priority' ? priorityMap[group] : group)}
               </div>
               {/* Show the count of tickets or fallback if empty */}
               <div className="kanban-column-count">
-                {groupedTickets[group].length}
+                {sortedGroupedTickets[group].length}
               </div>
             </div>
             <div className="added">
@@ -39,8 +39,11 @@ function KanbanBoard({ tickets, grouping, users, sorting }) {
           </div>
           <div className="kanban-cards">
             {sortedGroupedTickets[group].length > 0 ? (
-              sortedGroupedTickets[group].map(ticket => (
-                <TicketCard key={ticket.id} ticket={ticket} />
+              sortedGroupedTickets[group].map(({ ticket, userName }) => (
+                <div key={ticket.id}>
+                  <div className="user-name">{userName}</div>
+                  <TicketCard ticket={ticket} />
+                </div>
               ))
             ) : (
               <div className="kanban-no-tickets">No tickets</div> // Optional: display if there are no tickets in a group
