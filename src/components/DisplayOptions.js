@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { RxCaretDown } from "react-icons/rx";
+
 function DisplayOptions({ selectedGrouping, selectedOrdering, onGroupingChange, onOrderingChange }) {
-  const [isOpen, setIsOpen] = useState();
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
