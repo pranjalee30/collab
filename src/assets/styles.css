@@ -29,16 +29,26 @@ body {
     padding:10px;
   }
   .kanban-column-header{
-     display:flex;
-     flex-direction: row;
-     /* align-items: center;
-      */
-     gap:2px;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
   }
   .kanban-card-count{
-    margin-top: 25px;
-    margin-left: 20px;
+    display:flex;
+    flex-direction:row;
+    gap:10px;
   }
+  .kanban-column-count{
+    margin-top:28px;
+  }
+  .added{
+    display:flex;
+    flex-direction:row;
+    height:30px;
+    padding-left:250px;
+    margin-top:23px;
+  }
+  
   
   /* Ticket card container */
   .ticket-card {
