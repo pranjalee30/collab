@@ -199,3 +199,7 @@
 }
 
   
+.kanban-column-header{
+  display: flex;
+  flex-direction: row;
+}
