@@ -19,8 +19,8 @@ export function groupTickets(tickets, grouping, users) {
     if (!grouped[group]) {
       grouped[group] = [];
     }
-
-    grouped[group].push(ticket);
+    grouped[group].push({ ticket});
+    
   });
 
   return grouped;
