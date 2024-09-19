@@ -7,7 +7,8 @@ function TicketCard({ ticket }) {
     'Done': 'Done.svg',
     'Cancelled': 'Cancelled.svg'
   };
-  const statusImage = statusImageMap[ticket.status]
+
+  const statusImage = statusImageMap[ticket.status];
   return (
     <div className={`ticket-card priority-${ticket.priority}`}>
       <div className="header">

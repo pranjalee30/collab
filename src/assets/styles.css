@@ -171,12 +171,15 @@
   font-weight: bold;
 }
 .r-icon {
-  font-size: 7px; /* Reduced icon size */
+  font-size: 12px; /* Reduced icon size */
 }
 .dis {
   display: flex;
   flex-direction: row;
   gap: 3.5px; /* Reduced gap */
+}
+.dis label {
+   font-size: 12px;
 }
 
 .display-button:hover {
