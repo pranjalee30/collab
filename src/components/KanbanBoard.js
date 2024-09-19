@@ -11,9 +11,15 @@ function KanbanBoard({ tickets, grouping, users }) {
     <div className="kanban-board">
       {Object.keys(groupedTickets).map(group => (
         <div key={group} className="kanban-column">
-          <h2 className="kanban-column-title">
-            {grouping === 'priority' ? priorityMap[group] : group} {/* Show priority name or group */}
-          </h2>
+          <div className="kanban-column-header">
+            <h2 className="kanban-column-title">
+              {grouping === 'priority' ? priorityMap[group] : group} {/* Show priority name or group */}
+            </h2>
+            {/* Display the number of tickets inline with the title */}
+            <span className="kanban-card-count">
+              {groupedTickets[group].length}
+            </span>
+          </div>
           <div className="kanban-cards">
             {groupedTickets[group].map(ticket => (
               <TicketCard key={ticket.id} ticket={ticket} />
