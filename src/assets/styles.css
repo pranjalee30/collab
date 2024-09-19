@@ -9,7 +9,7 @@ body {
 
 .app {
     padding: 20px;
-    max-height: 100%;
+    height: 100%;
     max-width: 100%;
     background-color: #ddd;
 }
@@ -22,7 +22,8 @@ body {
   
 .kanban-board {
     display: flex;
-    gap: 20px;
+    /* justify-content: center; */
+    gap: 10px;
 }
   
   .kanban-column {
@@ -191,11 +192,11 @@ body {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 2.8px; /* Reduced radius */
-  padding: 7px; /* Reduced padding */
+  padding: 10px; /* Reduced padding */
   width: 175px; /* Reduced width */
   box-shadow: 0 1.4px 5.6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  margin-top: 7px;
+  margin-top: 3px;
 }
 
 /* Each section (Grouping/Ordering) */
@@ -240,6 +241,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  width: 500%;
   align-items: center;
 }
