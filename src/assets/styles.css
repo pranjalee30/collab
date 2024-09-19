@@ -18,21 +18,26 @@ body {
   
   .kanban-board {
     display: flex;
+    /* justify-content: center; */
     gap: 20px;
   }
   
   .kanban-column {
     flex: 1;
     background-color:transparent;
+    justify-content: center;
     padding:10px;
   }
   .kanban-column-header{
      display:flex;
      flex-direction: row;
-     gap:10px;
+     /* align-items: center;
+      */
+     gap:2px;
   }
   .kanban-card-count{
     margin-top: 25px;
+    margin-left: 20px;
   }
   
   /* Ticket card container */
@@ -223,4 +228,11 @@ body {
 .kanban-column-header{
   display: flex;
   flex-direction: row;
+}
+
+.kanban-column-header-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
