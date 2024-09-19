@@ -1,30 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 /* src/index.css */
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #ddd;
-  padding: 0;
-  margin: 0;
-}
+  body {
+   font-family: 'Inter', sans-serif;
+   background-color: #ddd;
+   padding: 0;
+   margin: 0;
+  }
 
-.app {
-    padding: 20px;
+  .app {
     height: 100%;
-    max-width: 100%;
+    width: 128%;
     background-color: #ddd;
-}
+  }
   
-.controls {
+  .controls {
+    padding-left:10px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
-}
+  }
   
-.kanban-board {
+  .kanban-board {
     display: flex;
-    /* justify-content: center; */
     gap: 10px;
-}
+  }
   
   .kanban-column {
     background-color: transparent;
@@ -36,6 +34,7 @@ body {
     justify-content:space-between;
   }
   .kanban-card-count{
+    margin-left: 10px;
     display:flex;
     flex-direction:row;
     gap:10px;
