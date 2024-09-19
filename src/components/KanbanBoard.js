@@ -20,9 +20,9 @@ function KanbanBoard({ tickets, grouping, users, sorting }) {
               {grouping === 'priority' ? priorityMap[group] : group} {/* Show priority name or group */}
             </h2>
             {/* Display the number of tickets inline with the title */}
-            <span className="kanban-card-count">
+            <div className="kanban-card-count">
               {groupedTickets[group].length}
-            </span>
+            </div>
           </div>
           <div className="kanban-cards">
             {sortedGroupedTickets[group].map(ticket => (

@@ -18,6 +18,14 @@
     background-color:transparent;
     padding:10px;
   }
+  .kanban-column-header{
+     display:flex;
+     flex-direction: row;
+     gap:10px;
+  }
+  .kanban-card-count{
+    margin-top: 25px;
+  }
   
   /* Ticket card container */
   .ticket-card {

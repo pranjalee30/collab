@@ -4,7 +4,7 @@ import { RxCaretDown } from "react-icons/rx";
 
 function DisplayOptions({ selectedGrouping, selectedOrdering, onGroupingChange, onOrderingChange }) {
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null); // Use ref to track clicks outside the dropdown
+  const dropdownRef = useRef(null);
 
   // Toggle dropdown on hover
   const handleMouseEnter = () => {
