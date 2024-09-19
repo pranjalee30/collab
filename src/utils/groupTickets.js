@@ -1,19 +1,19 @@
-export function groupTickets(tickets, grouping, users = []) {
+export function groupTickets(tickets, grouping, users) {
   const grouped = {};
 
-  // Map user IDs to user names
-  const userMap = users.reduce((map, user) => {
-    map[user.id] = user.name;
-    return map;
-  }, {});
+
+  const userMap = {};
+  users.forEach(user => {
+    userMap[user.id] = user.name;
+  });
 
   tickets.forEach(ticket => {
     let group;
 
     if (grouping === 'user') {
-      group = userMap[ticket.userId] || 'Unknown User'; // Group by user name
+      group = userMap[ticket.userId]; 
     } else {
-      group = ticket[grouping]; // Group by status or priority
+      group = ticket[grouping]; 
     }
 
     if (!grouped[group]) {
@@ -25,3 +25,4 @@ export function groupTickets(tickets, grouping, users = []) {
 
   return grouped;
 }
+
