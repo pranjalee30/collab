@@ -1,5 +1,7 @@
 .app {
     padding: 20px;
+    height: 100vh;
+    background-color: grey;
   }
   
   .controls {
@@ -129,6 +131,7 @@
   /* Container for the display options */
 .display-options {
   position: relative;
+  background-color: #fff;
   display: inline-block;
 }
 
